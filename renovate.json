@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Adopts the shared DIRACGrid Renovate policy (see DIRACGrid/.github renovate-config.json).",
+  "description": "Adopts the shared DIRACGrid Renovate policy (see DIRACGrid/.github renovate-config.json). The docs and demos requirement files are upstream's and are not installed by DIRAC: Renovate leaves them alone.",
   "extends": [
     "local>DIRACGrid/.github//renovate-config"
+  ],
+  "ignorePaths": [
+    "docs/**",
+    "demos/**"
   ]
 }
